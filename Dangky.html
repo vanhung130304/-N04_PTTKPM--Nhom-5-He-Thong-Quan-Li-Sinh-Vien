@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education management</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="shortcut icon" type="image/x-icon" href="HTMLpicture/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content-login">
+            <form id="form-resigter">
+                <div class="logo-phenikaa-w d-flex justify-content-center mb-50">
+                    <img src="./HTMLpicture/logo-Phenikaa-w.png" class="img-logo-w">
+                </div>
+                <div class="content-form-login position-relative">
+                    <h2 class="text-center title-h2 text-uppercase color-dask-blue fw-bold">Đăng ký</h2>
+                    <div>
+                        <span id="none-info" class="validate">Tài khoản và mật khẩu không được để trống</span>
+                        <span id="error-re-pass" class="validate">Mật khẩu xác nhận sai</span>
+                    </div>
+                    <div class="mb-20">
+                        <input id="account" type="email" placeholder="Nhập email"
+                            class="form-control user-form color-dask-blue" autocomplete="off">
+                    </div>
+                    <div class="mb-20 position-relative">
+                        <input type="password" id="password" placeholder="Nhập mật khẩu"
+                            class="form-control password-form color-dask-blue">
+                        <label for="password" class="form-label show-pass">
+                            <i class="fa-regular fa-eye" onclick="changeTypePass()"></i>
+                        </label>
+                        <label for="password" class="form-label hide-pass">
+                            <i class="fa-regular fa-eye-slash" onclick="changeTypePass()"></i>
+                        </label>
+                    </div>
+                    <div class="mb-50 position-relative">
+                        <input type="password" id="re-password" placeholder="Xác nhận mật khẩu"
+                            class="form-control password-form color-dask-blue">
+                        <label for="re-password" class="form-label show-pass">
+                            <i class="fa-regular fa-eye" onclick="changeTypePass_2()"></i>
+                        </label>
+                        <label for="re-password" class="form-label hide-pass">
+                            <i class="fa-regular fa-eye-slash" onclick="changeTypePass_2()"></i>
+                        </label>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn-login btn bg-btn-blue" name="" id="" value="Đăng ký">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <marquee behavior="" direction="">Phan Viết Anh Tuấn</marquee>
+        </div>
+    </div>
+    <script src="javascript/form-resigter.js"></script>
+</body>
+
+</html>

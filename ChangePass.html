@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education management</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="shortcut icon" type="image/x-icon" href="HTMLpicture/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-login">
+            <form action="">
+                
+                <div class="content-form-login position-relative box-forgot-pass changepass">
+                    <div class="text-center forgot-pass-img">
+                        <img src="./HTMLpicture/forgot-pass.png" alt="">
+                        <h2 class="text-center title-h2 color-dask-blue fg-pass-text">Thay đổi mật khẩu</h2>
+                    </div>
+                    <div class="mb-20 position-relative">
+                        <input type="password" id="password1" placeholder="Nhập mật khẩu hiện tại" class="form-control password-form color-dask-blue">
+                        <label for="password1" class="form-label show-pass">
+                            <i class="fa-regular fa-eye" onclick="changeTypePass1()"></i>
+                        </label>
+                        <label for="password1" class="form-label hide-pass">
+                            <i class="fa-regular fa-eye-slash" onclick="changeTypePass1()"></i>
+                        </label>
+                    </div>
+                    <div class="mb-20 position-relative">
+                        <input type="password" id="password2" placeholder="Nhập mật khẩu mới" class="form-control password-form color-dask-blue">
+                        <label for="password2" class="form-label show-pass">
+                            <i class="fa-regular fa-eye" onclick="changeTypePass2()"></i>
+                        </label>
+                        <label for="password2" class="form-label hide-pass">
+                            <i class="fa-regular fa-eye-slash" onclick="changeTypePass2()"></i>
+                        </label>
+                    </div>
+                    <div class="mb-20 position-relative">
+                        <input type="password" id="password3" placeholder="Nhập lại mật khẩu mới" class="form-control password-form color-dask-blue">
+                        <label for="password3" class="form-label show-pass">
+                            <i class="fa-regular fa-eye" onclick="changeTypePass3()"></i>
+                        </label>
+                        <label for="password3" class="form-label hide-pass">
+                            <i class="fa-regular fa-eye-slash" onclick="changeTypePass3()"></i>
+                        </label>
+                    </div>
+                    <div class="mb-20">
+                        <input type="submit" class="btn-login btn bg-btn-orange" value="Thay đổi">
+                    </div>
+                   
+                </div>
+            </form>
+        </div>
+        <div class="copyright changepasscpr">
+            <marquee behavior="" direction="">Phan Viết Anh Tuấn</marquee>
+        </div>
+    </div>
+</body>
+<script>
+    function changeTypePass1(){
+        let password = document.getElementById('password1');
+        if(password.type == 'text'){
+            password.type = 'password';
+        }else{
+            password.type = 'text';
+        }
+    }
+    function changeTypePass2(){
+        let password = document.getElementById('password2');
+        if(password.type == 'text'){
+            password.type = 'password';
+        }else{
+            password.type = 'text';
+        }
+    }
+    function changeTypePass3(){
+        let password = document.getElementById('password3');
+        if(password.type == 'text'){
+            password.type = 'password';
+        }else{
+            password.type = 'text';
+        }
+    }
+</script>
+
+</html>

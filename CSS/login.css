@@ -1,0 +1,205 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #223771;
+    background-image: url(../HTMLpicture/bg-login.jpg);
+    display: flex;
+    background-size: cover;
+}
+.content-login{
+    max-width: 1140px;
+    margin: 0px auto;
+}
+.logo-phenikaa-w{
+    margin-top: 25px;
+}
+
+.img-logo-w {
+    max-height: 90px;
+}
+.content-form-login {
+    min-width: 450px;
+    background: linear-gradient(to top, #f0f3fd, #b2c2f0);
+    border-radius: 30px;
+    padding: 80px 60px;
+    margin-top: 35px;
+}
+.position-relative {
+    position: relative !important;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.form-label {
+    margin-bottom: .5rem;
+}
+.label-fsize{
+    font-size: 20px;
+}
+.form-control{
+    width: 100%;
+    height: 48px;
+    padding: 10px 50px 10px;
+    border-radius:6px ;
+    border: 1px solid #acbeec;
+    font-size: 16px;
+    font-weight: 400;
+    outline-offset: 2px;
+    outline-color: #5a7adb;
+}
+
+.user-form{
+    background-image: url(../HTMLpicture/user_icon.jpg);
+    background-repeat: no-repeat; 
+    background-position: 0px;
+}
+.password-form{
+    background-image: url(../HTMLpicture/key-icon.jpg);
+    background-repeat: no-repeat; 
+    background-position: 0px;
+}
+.question-icon{
+    background-image: url(../HTMLpicture/question.jpg);
+    background-repeat: no-repeat; 
+    background-position: 0px;
+}
+.content-form-login .form-label{
+        position: absolute;
+    }
+.show-pass{
+    font-size: 16px;
+    font-weight: 300;
+    right: 15px;
+    color: #888888;
+    top: 16px;
+    cursor: pointer;
+}
+.hide-pass {
+    font-size: 16px;
+    font-weight: 300;
+    right: 15px;
+    color: #888888;
+    top: 16px;
+    cursor: pointer;
+}
+ input[type="text"] ~ .hide-pass{
+    display: none;
+}
+ input[type="password"] ~ .show-pass{
+    display: none;
+}
+.font-size-color{
+    font-size: 16px;
+    color: #223771;
+}
+.pd-left{
+    padding-left: 21px;
+}
+.btn-login{
+    background: #223771;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 6px;
+    height: 48px;
+    line-height: 39px;
+    width: 100%;
+    
+}
+.or{
+    margin: 25px 0px 25px 0px;
+    text-align: center;
+    color: #888;
+    position: relative;
+    font-size: 16px;
+}
+.or:before {
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background: #cccccc;
+    top: 9px;
+    left: 0px;
+    z-index: 1;
+    content: "";
+}
+.or:after {
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    background: #cccccc;
+    top: 9px;
+    right: 0px;
+    z-index: 1;
+    content: "";
+}
+.content-form-login:before {
+    position: absolute;
+    background: url(../HTMLpicture/login-line-1.png) top center no-repeat;
+    height: 89px;
+    width: 274px;
+    top: -20px;
+    right: -12px;
+    z-index: 1;
+    content: "";
+}
+.content-form-login:after {
+    position: absolute;
+    background: url(../HTMLpicture/login-line-2.png) top center no-repeat;
+    height: 74px;
+    width: 138px;
+    bottom: -24px;
+    left: -16px;
+    z-index: 1;
+    content: "";
+}
+.bg-btn-orange:hover{
+    background-color: #f8843d;
+}
+.bg-btn-blue:hover{
+    background-color: #0d6efd;
+}
+.copyright{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    bottom: 0;
+    color: #96aae0;
+    width: 100%;
+}
+marquee {
+    width: -webkit-fill-available;
+}
+.box-forgot-pass {
+    padding-top: 20px !important;
+    padding-bottom: 60px !important;
+}
+.forgot-pass-img img {
+    max-width: 340px;
+    margin-bottom: 20px;
+}
+.fg-pass-text{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.changepass{
+    margin-top: 24px;
+}
+.changepasscpr{
+    height: 30px;
+}
+.fgp-logo-phenikaa{
+    margin-top: 15px;
+}
+.fgpcpr{
+    height: 33px;
+}
+.validate{
+    display: none;
+    color: red;
+    width: 100%;
+}
