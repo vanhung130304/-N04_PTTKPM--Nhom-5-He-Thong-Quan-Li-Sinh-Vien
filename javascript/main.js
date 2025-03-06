@@ -347,3 +347,13 @@ function dangkyphuckhao() {
     document.getElementById("dangkyphuckhao").scrollTop = 0;
     document.getElementById("dangkyphuckhao").style.display = "block";
 };
+function bqt() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display != "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    document.getElementById("bqt").scrollTop = 0;
+    document.getElementById("bqt").style.display = "block";
+};
