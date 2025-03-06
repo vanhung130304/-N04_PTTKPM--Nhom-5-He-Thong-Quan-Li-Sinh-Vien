@@ -347,3 +347,23 @@ function dangkyphuckhao() {
     document.getElementById("dangkyphuckhao").scrollTop = 0;
     document.getElementById("dangkyphuckhao").style.display = "block";
 };
+function lichhoc(){
+    var nd=document.getElementsByClassName("nd");
+    for(let i=0;i<nd.length;i++){
+        if(nd[i].style.display!="none"){
+            nd[i].style.display="none";
+        }
+    }
+    document.getElementById("lichhoc").scrollTop=0;
+    document.getElementById("lichhoc").style.display="block";
+};
+function thanhtoan() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display !== "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    document.getElementById("thanhtoan").scrollTop = 0;
+    document.getElementById("thanhtoan").style.display = "block";
+}
