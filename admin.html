@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="CSS/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSubmenu(id) {
+            let submenu = document.getElementById(id);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function showContent(contentId) {
+            let allContent = document.querySelectorAll('.content-section');
+            allContent.forEach(content => content.style.display = 'none'); // Ẩn tất cả các phần nội dung
+
+            let content = document.getElementById(contentId);
+            content.style.display = 'block'; // Hiển thị phần nội dung cần thiết
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <h4 class="text-center">Trang Quản Trị</h4>
+        <a href="#">Trang chủ</a>
+        <a href="#">Tin tức</a>
+        <a href="#" onclick="toggleSubmenu('profileMenu')">Profile ▾</a>
+        <div id="profileMenu" class="submenu">
+            <a href="javascript:void(0)" onclick="showContent('profileSection')">Hồ sơ</a>
+            <a href="javascript:void(0)" onclick="showContent('xinXacNhanSection')">Xin xác nhận</a>
+        </div>
+        <a href="#" onclick="toggleSubmenu('hocTapMenu')">Góc học tập ▾</a>
+        <div id="hocTapMenu" class="submenu">
+            <a href="javascript:void(0)" onclick="showContent('danhSachHocSinhSection')">Danh sách học sinh</a>
+            <a href="javascript:void(0)" onclick="showContent('traCuuDiemSection')">Tra cứu điểm</a>
+            <a href="javascript:void(0)" onclick="showContent('chuongTrinhHocSection')">Chương trình học</a>
+            <a href="javascript:void(0)" onclick="showContent('dangKiPhucKhaoSection')">Đăng kí xin phúc khảo</a>
+            <a href="javascript:void(0)" onclick="showContent('congNhanDiemSection')">Công nhận điểm</a>
+            <a href="javascript:void(0)" onclick="showContent('xetTotNghiepSection')">Xét tốt nghiệp</a>
+        </div>
+        <a href="#" onclick="toggleSubmenu('dangKiMenu')">Đăng kí trực tuyến ▾</a>
+        <div id="dangKiMenu" class="submenu">
+            <a href="javascript:void(0)" onclick="showContent('dangKiHocSection')">Đăng kí học</a>
+            <a href="javascript:void(0)" onclick="showContent('dangKiTrucTuyenSection')">Đăng kí trực tuyến</a>
+            <a href="javascript:void(0)" onclick="showContent('traCuuKetQuaSection')">Tra cứu kết quả đăng kí</a>
+        </div>
+        <a href="#" onclick="toggleSubmenu('thoiKhoaBieuMenu')">Thời khóa biểu ▾</a>
+        <div id="thoiKhoaBieuMenu" class="submenu">
+            <a href="javascript:void(0)" onclick="showContent('lichHocSection')">Lịch học</a>
+            <a href="javascript:void(0)" onclick="showContent('lichThiSection')">Lịch thi</a>
+        </div>
+        <a href="#" onclick="toggleSubmenu('taiChinhMenu')">Tài chính ▾</a>
+        <div id="taiChinhMenu" class="submenu">
+            <a href="javascript:void(0)" onclick="showContent('hocPhiSection')">Học phí</a>
+            <a href="javascript:void(0)" onclick="showContent('thanhToanHocPhiSection')">Thanh toán học phí online</a>
+            <a href="javascript:void(0)" onclick="showContent('bangQuyetToanSection')">Bảng quyết toán cá nhân</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="profileSection" class="content-section" style="display:none;">
+            <h3>Hồ sơ cá nhân</h3>
+            <p>Thông tin cá nhân của bạn ở đây.</p>
+        </div>
+
+        <div id="xinXacNhanSection" class="content-section" style="display:none;">
+            <h3>Xác nhận</h3>
+            <p>Thông tin xác nhận sẽ được hiển thị tại đây.</p>
+        </div>
+
+        <div id="danhSachHocSinhSection" class="content-section" style="display:none;">
+            <h3>Danh sách học sinh</h3>
+            <p>Danh sách học sinh của bạn sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="traCuuDiemSection" class="content-section" style="display:none;">
+            <h3>Tra cứu điểm</h3>
+            <p>Thông tin điểm số sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="chuongTrinhHocSection" class="content-section" style="display:none;">
+            <h3>Chương trình học</h3>
+            <p>Thông tin chương trình học sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="dangKiPhucKhaoSection" class="content-section" style="display:none;">
+            <h3>Đăng kí xin phúc khảo</h3>
+            <p>Thông tin đăng kí phúc khảo sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="congNhanDiemSection" class="content-section" style="display:none;">
+            <h3>Công nhận điểm</h3>
+            <p>Thông tin công nhận điểm sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="xetTotNghiepSection" class="content-section" style="display:none;">
+            <h3>Xét tốt nghiệp</h3>
+            <p>Thông tin xét tốt nghiệp sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="dangKiHocSection" class="content-section" style="display:none;">
+            <h3>Đăng kí học</h3>
+            <p>Thông tin đăng kí học sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="dangKiTrucTuyenSection" class="content-section" style="display:none;">
+            <h3>Đăng kí trực tuyến</h3>
+            <p>Thông tin đăng kí trực tuyến sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="traCuuKetQuaSection" class="content-section" style="display:none;">
+            <h3>Tra cứu kết quả đăng kí</h3>
+            <p>Thông tin tra cứu kết quả đăng kí sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="lichHocSection" class="content-section" style="display:none;">
+            <h3>Lịch học</h3>
+            <p>Lịch học của bạn sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="lichThiSection" class="content-section" style="display:none;">
+            <h3>Lịch thi</h3>
+            <p>Lịch thi của bạn sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="hocPhiSection" class="content-section" style="display:none;">
+            <h3>Học phí</h3>
+            <p>Thông tin học phí sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="thanhToanHocPhiSection" class="content-section" style="display:none;">
+            <h3>Thanh toán học phí online</h3>
+            <p>Thông tin thanh toán học phí sẽ được hiển thị ở đây.</p>
+        </div>
+
+        <div id="bangQuyetToanSection" class="content-section" style="display:none;">
+            <h3>Bảng quyết toán cá nhân</h3>
+            <p>Thông tin bảng quyết toán cá nhân sẽ được hiển thị ở đây.</p>
+        </div>
+    </div>
+</body>
+</html>

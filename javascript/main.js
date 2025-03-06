@@ -185,6 +185,7 @@ function temppage(){
     }
     document.getElementById("temp-page").scrollTop=0;
     document.getElementById("temp-page").style.display="block";
+<<<<<<< HEAD
 };
 function dkhoc(){
     var nd=document.getElementsByClassName("nd");
@@ -243,3 +244,6 @@ function kqdk(){
     document.getElementById("kqdk").scrollTop=0;
     document.getElementById("kqdk").style.display="block";
 };
+=======
+};
+>>>>>>> 46225018b1cab323c92213d1486684fd82da8105

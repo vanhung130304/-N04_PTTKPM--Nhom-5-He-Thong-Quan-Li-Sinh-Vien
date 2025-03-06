@@ -510,6 +510,7 @@ p {
 }
 .Trangtracuudiem{
     display: none;
+<<<<<<< HEAD
 }
 .cl-l1{
     border-radius: 20px;
@@ -715,4 +716,6 @@ p {
 
 .kqdk .btn-secondary:hover {
     background-color: #5a6268;
+=======
+>>>>>>> 46225018b1cab323c92213d1486684fd82da8105
 }
