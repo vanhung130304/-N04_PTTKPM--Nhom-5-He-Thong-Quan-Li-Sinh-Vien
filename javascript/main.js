@@ -357,3 +357,23 @@ function bqt() {
     document.getElementById("bqt").scrollTop = 0;
     document.getElementById("bqt").style.display = "block";
 };
+function lichhoc(){
+    var nd=document.getElementsByClassName("nd");
+    for(let i=0;i<nd.length;i++){
+        if(nd[i].style.display!="none"){
+            nd[i].style.display="none";
+        }
+    }
+    document.getElementById("lichhoc").scrollTop=0;
+    document.getElementById("lichhoc").style.display="block";
+};
+function thanhtoan() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display !== "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    document.getElementById("thanhtoan").scrollTop = 0;
+    document.getElementById("thanhtoan").style.display = "block";
+}
