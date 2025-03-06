@@ -1,0 +1,131 @@
+.profile{
+    width: 100%;
+    display: none;
+}
+#h1-infor{
+    font-size: 20px;
+    color: rgb(17, 17, 118);
+    margin: 10px 20px;
+}
+.content-infor{
+    
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.rowinfor{
+    display: flex ;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#personalid{
+    margin-left: 50px;
+}
+.form-infor{
+    padding: 5px;
+}
+.profile select{
+    font-size: 14px;
+    padding: 10px 5px;
+    border-radius: .25rem;
+    width: 100%;
+    border: 0px solid #acbeec;
+    background: #acbeec;
+    color: #222;
+}
+.row-lable{
+    display: flex;
+    width: 900px;
+    height: 50px;
+    border: #a7b8e6;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.Gachchan{
+    border-right: 1px solid gray;
+    margin-left: 30px;
+    margin-right: 30px;
+    opacity: 0.2;
+}
+.bg-button-profile{
+    background: #edf1fb;
+    height: 64px;
+    margin-top: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 11px;
+    text-align: right;
+    padding-right: 30px;
+    padding-left: 20px;
+}
+.bg-button-profile button{
+    background: #f8843d;
+    color: #fff;
+    border: 1px solid #f8843d;
+    height: 42px;
+    border-radius: 4px;
+    min-width: 180px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 31px;
+}
+.rowinfor .info-left{
+    flex: 0 0 auto;
+    padding-right: 0px;
+    width: 120px;
+}
+.rowinfor .info-right{
+    flex: 1;
+}
+.label-right{
+    border-radius: 10px;
+    background: #eef3fe;
+    height: 52px;
+    line-height: 56px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+#rl-1{
+    padding: 0 75px;
+}
+#rl-0{
+    margin-left: 15px;
+}
+.profile-title{
+    border-bottom: 1px solid #d1d1d1;
+    height: 52px;
+    line-height: 52px;
+    width: 100%;
+    position: relative;
+}
+.profile-title h3{
+    color: #223771;
+    font-size: 24px;
+    line-height: 52px;
+    font-weight: 700;
+    padding-left: 30px;
+}
+.main-infor{
+    padding: 15px 20px 15px 30px;
+}
+.profile-title:before {
+    position: absolute;
+    height: 30px;
+    width: 4px;
+    border-radius: 20px;
+    background: #223771;
+    content: "";
+    top: 12px;
+    left: -2px;
+}
+.bg-button-profile button:hover{
+    background-color: #223771;
+    border: 1px solid #223771;
+}

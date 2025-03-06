@@ -1,0 +1,42 @@
+.Lichthi{
+    display: none;
+}
+.Check{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.Lichthi button{
+    margin-right: 20px;
+    border: 1px solid #00000085;
+    border-radius: 10px;
+    height: 40px;
+}
+.Lichthi select{
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    margin: 0 20px;
+}
+.title-lichthi{
+    text-align: center;
+}
+.Bangthi{
+    padding-bottom: 20px;
+}
+
+.Lichthi .form-top{
+    transform: scaleX(1.04);
+    padding-bottom: 20px;
+}
+.Lichthi .form-top button{
+    background-color: #223771;
+    color: white;
+    border-radius: 5px;
+}
+.Lichthi .form-top button:hover{
+    background-color: #0b1a49;
+}
+

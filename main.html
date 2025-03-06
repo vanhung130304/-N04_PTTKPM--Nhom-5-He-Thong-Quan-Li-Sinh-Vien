@@ -1,0 +1,1857 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/table.css">
+    <link rel="stylesheet" href="./CSS/lichthi.css">
+    <link rel="stylesheet" href="./CSS/tintuc.css">
+    <link rel="stylesheet" href="./CSS/profile.css">
+    <link rel="stylesheet" href="./CSS/congnhandiem.css">
+    <link rel="stylesheet" href="./CSS/xettotnghiep.css">
+    <link rel="stylesheet" href="./CSS/fee.css">
+    <link rel="shortcut icon" type="image/x-icon" href="HTMLpicture/logo.ico">
+</head>
+
+<body>
+    <div class="wrapper" id="wrap">
+        <div class="left-menu">
+            <div class="menu-top">
+                <a href="#" class="menu-icon" onclick="smallsidebar()">
+                    <img src="./HTMLpicture/menu-icon.jpg" alt="">
+                </a>
+            </div>
+            <div class="menu-bottom" id="menu-bottom">
+                <div class="menu-item">
+                    <a href="#" class="menu-header" onclick="trangchu()">
+                        <img class="item-icon" src="./HTMLpicture/house-icon.jpg" alt="">
+                        <span>Trang chủ</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header" href="#" onclick="tintuc()">
+                        <img class="item-icon" src="./HTMLpicture/news.jpg" alt="">
+                        <span>Tin tức</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/profile.jpg" alt="">
+                        <span>Profile</span>
+                        <img style="margin-right: -8px;" class="item-arrow-icon" src="./HTMLpicture/arrowicon.jpg"
+                            alt="">
+                        <img style="margin-right: -8px;" class="item-arrow-icon down"
+                            src="./HTMLpicture/arrowicon-down.jpg" alt="">
+                    </a>
+                    <div id="collapse1" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="profile()">Hồ sơ</a>
+                        <a href="#" onclick="temppage()">Xin xác nhận</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/ght.jpg" alt="">
+                        <span>Góc học tập</span>
+                        <img style="margin-right: -8px;" class="item-arrow-icon" src="./HTMLpicture/arrowicon.jpg"
+                            alt="">
+                        <img style="margin-right: -8px;" class="item-arrow-icon down"
+                            src="./HTMLpicture/arrowicon-down.jpg" alt="">
+                    </a>
+                    <div id="collapse2" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="danhsachhs()">Danh sách học sinh</a>
+                        <a href="#" onclick="tracuudiem()">Tra cứu điểm</a>
+                        <a href="#" onclick="temppage()">Chương trình học</a>
+                        <a href="#" onclick="temppage()">Đăng ký xin phúc khảo</a>
+                        <a onclick="congnhandiem()" href="#">Công nhận điểm</a>
+                        <a onclick="xettotnghiep()" href="#">Xét tốt nghiệp</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/dkhtt.jpg" alt="">
+                        <span>Đăng ký trực tuyến</span>
+                        <img class="item-arrow-icon" src="./HTMLpicture/arrowicon2.jpg" alt="">
+                        <img class="item-arrow-icon down" src="./HTMLpicture/arrowicon-down2.jpg" alt="">
+                    </a>
+                    <div id="collapse3" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="dkhoc()">Đăng ký học</a>
+                        <a href="#" onclick="dknv()">Đăng ký nguyện vọng</a>
+                        <a href="#" onclick="kqdk()">Tra cứu kết quả đăng ký</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/tkb.jpg" alt="">
+                        <span>Thời khóa biểu</span>
+                        <img class="item-arrow-icon" src="./HTMLpicture/arrowicon3.jpg" alt="">
+                        <img class="item-arrow-icon down" src="./HTMLpicture/arrowicon-down3.jpg" alt="">
+                    </a>
+                    <div id="collapse4" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="temppage()">Lịch học</a>
+                        <a href="#" onclick="lichthi()">Lịch thi</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/tc.jpg" alt="">
+                        <span>Tài chính</span>
+                        <img class="item-arrow-icon" src="./HTMLpicture/arrowicon4.jpg" alt="">
+                        <img class="item-arrow-icon down" src="./HTMLpicture/arrowicon-down4.jpg" alt="">
+                    </a>
+                    <div id="collapse5" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="hocphi()">Học phí</a>
+                        <a href="#" onclick="temppage()">Thanh toán học phí online</a>
+                        <a href="#" onclick="temppage()">Bảng quyết toán cá nhân</a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a class="menu-header collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapse6"
+                        aria-expanded="false">
+                        <img class="item-icon" src="./HTMLpicture/vb.jpg" alt="">
+                        <span>Văn bản</span>
+                        <img class="item-arrow-icon" src="./HTMLpicture/arrowicon5.jpg" alt="">
+                        <img class="item-arrow-icon down" src="./HTMLpicture/arrowicon-down5.jpg" alt="">
+                    </a>
+                    <div id="collapse6" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
+                        <a href="#" onclick="vanban()">Văn bản, quy định, biểu mẫu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-page">
+            <div class="navbar">
+                <div class="search">
+                    <form class="search-group">
+                        <input type="text" class="search-form" placeholder="Tìm kiếm thông tin">
+                        <button>
+                            <img src="./HTMLpicture/searchicon.jpg" alt="">
+                        </button>
+                    </form>
+                </div>
+                <div class="user">
+                    <div class="nav-account">
+                        <div class="dropdown">
+                            <button class="" type="button" data-bs-toggle="dropdown">
+                                <div class="user-image">
+                                    <img class="user-image" src="./HTMLpicture/no-avatar.png" alt="">
+                                </div>
+                                <span>Lê Viết Huấn </span>
+                                <img class="user-arrow" src="./HTMLpicture/arrowicon-down.jpg" alt="">
+                            </button>
+                            <ul class="dropdown-menu user-dropdown" data-bs-popper="none">
+                                <li class="img-user">
+                                    <div class="user-avata-img">
+                                        <img src="./HTMLpicture/avata.png" alt="">
+                                    </div>
+                                    <span>Lê Viết Huấn</span>
+                                    <p>Cập nhật lần cuối 31/05/2024</p>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="ChangePass.html"><img src="HTMLpicture/key-icon2.jpg"
+                                            alt="">
+                                        Thay đổi mật khẩu
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="Login.html"><img src="./HTMLpicture/signout-icon.jpg"
+                                            alt="">
+                                        Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="trangchu" class="nd">
+                    <p class="title-trangchu">Xin chào!</p>
+                    <div class="dashboad">
+                        <div class="box">
+                            <a href="#" class="item-box" style="border-color: #26465e;">
+                                <img src="./HTMLpicture/xinxacnhan.png" alt="">
+                                <div class="dashboad-title">Học sinh</div>
+                            </a>
+                        </div>
+                        <div class="box ">
+                            <a href="#" class="item-box" style="border-color: #d36f51;">
+                                <img src="./HTMLpicture/taichinh.png" alt="">
+                                <div class="dashboad-title">Tài chính</div>
+                            </a>
+                        </div>
+                        <div class="box ">
+                            <a href="#" class="item-box" style="border-color: #0232b9;">
+                                <img src="./HTMLpicture/lichhoc.png" alt="">
+                                <div class="dashboad-title">Lịch học</div>
+                            </a>
+                        </div>
+                        <div class="box ">
+                            <a href="#" class="item-box" style="border-color: #a12529;">
+                                <img src="./HTMLpicture/dkh.png" alt="">
+                                <div class="dashboad-title">Đăng ký học</div>
+                            </a>
+                        </div>
+                        <div class="box ">
+                            <a href="#" class="item-box" style="border-color: #f94341;">
+                                <img src="./HTMLpicture/nhaphs.png" alt="">
+                                <div class="dashboad-title">Nhập hồ sơ</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="content-trangchu">
+                        <div class="w1/2">
+                            <div class="content-box">
+                                <div style="padding-left: 20px;">
+                                    <div class="title">
+                                        <span class="icon"></span>
+                                        <span>Giới thiệu</span>
+                                    </div>
+                                    <a href="#" class="lage-title">
+                                        TRƯỜNG ĐẠI HỌC PHENIKAA
+                                    </a>
+                                    <div class="about-short-text">
+                                        <p>
+                                            Viện Nghiên cứu Nano là một tổ chức khoa học và công nghệ trực thuộc Trường
+                                            Đại học
+                                            PHENIKAA được thành lập theo Nghị Quyết số 02/NQ-ĐHP-HĐQT của Chủ tịch Hội
+                                            đồng quản
+                                            trị ngày 27/02/2019 và Quyết định số 53/2019/QĐ-ĐHP ngày 27/02/2019 của Hiệu
+                                            trưởng
+                                            Trường Đại học PHENIKAA.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1/2">
+                            <div class="content-box">
+
+                                <div class="title">
+                                    <span class="icon" style="background-color: #eb6325;"></span>
+                                    <span>Tin tức</span>
+                                    <a href="#" class="view-all" name="#tintuc">
+                                        Xem tất cả
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1/2">
+                            <div class="content-box">
+                                <div class="title">
+                                    <span class="icon"></span>
+                                    <span>Bạn bè</span>
+                                    <a href="#" class="view-all">
+                                        Xem tất cả
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w1/2">
+                            <div class="content-box">
+                                <div class="title">
+                                    <span class="icon" style="background-color: #eb6325;"></span>
+                                    <span>Dịch vụ</span>
+                                    <a href="#" class="view-all">
+                                        Xem tất cả
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="Trangtracuudiem nd" id="tracuudiem">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc hoc tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Tra cứu điểm</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Các học phần đã học</p>
+                        </div>
+                        <table>
+                            <tr class="table-head">
+                                <th rowspan="2">Stt</th>
+                                <th rowspan="2">Môn học</th>
+                                <th rowspan="2">Mã lớp học</th>
+                                <th rowspan="2">Thời gian</th>
+                                <th rowspan="2">Điểm danh</th>
+                                <th colspan="3">Điểm quá trình</th>
+                            </tr>
+                            <tr class="table-head">
+                                <th>CC1</th>
+                                <th>CC2</th>
+                                <th>LT1</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>AI</th>
+                                <th>N02</th>
+                                <th>15/03-15/06</th>
+                                <th>10</th>
+                                <th>10</th>
+                                <th>10</th>
+                                <th>10</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>C++</th>
+                                <th>N02</th>
+                                <th>15/03-15/06</th>
+                                <th>9</th>
+                                <th>9</th>
+                                <th>9</th>
+                                <th>9</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Giải Tích</th>
+                                <th>N02</th>
+                                <th>15/03-15/06</th>
+                                <th>10</th>
+                                <th>10</th>
+                                <th>9</th>
+                                <th>10</th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Pháp Luật Đại Cương</th>
+                                <th>N02</th>
+                                <th>15/03-15/06</th>
+                                <th>8</th>
+                                <th>8</th>
+                                <th>8</th>
+                                <th>8</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>Toán Rời Rạc</th>
+                                <th>N02</th>
+                                <th>15/03-15/06</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>7</th>
+                                <th>7</th>
+                            </tr>
+                           
+
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="Danhsach nd" id="danhsachhs">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc học tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Danh sách học sinh</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Danh sách học sinh</p>
+                        </div>
+                        <table>
+                            <tr class="table-head">
+                                <th>Stt</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Quê quán</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>Dương Văn Hưng</th>
+                                <th>Nam</th>
+                                <th>13/03/2004</th>
+                                <th>Nghêj An</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Dương Văn Hưng</th>
+                                <th>Nam</th>
+                                <th>13/03/2004</th>
+                                <th>Nghệ An</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Đinh Xuân Giáp</th>
+                                <th>Nam</th>
+                                <th>31/03/2004</th>
+                                <th>Nam Định</th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Lê Viết Huấn</th>
+                                <th>Nam</th>
+                                <th>30/02/2004</th>
+                                <th>Quảng BÌnh</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>Bùi MInh Đức</th>
+                                <th>Nam</th>
+                                <th>30/02/2004</th>
+                                <th>Hà Nội</th>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <th>Nguyễn Duy</th>
+                                <th>Nam</th>
+                                <th>30/02/2004</th>
+                                <th>Hà Nội</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="Lichthi nd" id="lichthi">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Thời khóa biểu</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Lịch thi</a>
+                        </p>
+                    </div>
+
+                    <div class="table-bg box-shadow">
+                        <div>
+
+                        </div>
+                        <div class="Check form-top">
+                            <span>Hoc ki</span>
+                            <select name="Chọn học kì" id="Chonhocki1">
+                                <option value="1">Chọn học kì</option>
+                                <option value="2">2022_2023_1</option>
+                                <option value="3">2022_2023_2</option>
+                                <option value="4">2022_2023_3</option>
+                                <option value="5">2023_2024_1</option>
+                                <option value="6">2023_2024_2</option>
+                            </select>
+                            <span>Học phần</span>
+                            <select name="Hocphan" id="1">
+                                <option value="1">--Không tìm thấy dữ liệu--</option>
+                            </select>
+                            <button>Xem lịch</button>
+                            <button>Xem lịch sử</button>
+                        </div>
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Lịch thi cá nhân</p>
+                        </div>
+                        <table>
+                            <tr class="table-head">
+                                <th>STT</th>
+                                <th>Mã học phần</th>
+                                <th>Tên học phần</th>
+                                <th>Lần thi</th>
+                                <th>Ngày thi</th>
+                                <th>Thời gian thi</th>
+                                <th>Hình thức</th>
+                                <th>Phòng thi</th>
+                                <th>Số báo danh</th>
+                                <th>Thông tin sinh viên</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>CSE703064</th>
+                                <th>Xây dựng ứng dụng Web</th>
+                                <th>1</th>
+                                <th>24/01/2024</th>
+                                <th>8:00-17:00</th>
+                                <th>Bài tập lớn</th>
+                                <th>A6-205(PC)</th>
+                                <th>204</th>
+                                <th>Dương Văn Hưng</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>CSE703064</th>
+                                <th>Ngôn Ngữ Lập Trình C</th>
+                                <th>2</th>
+                                <th>24/01/2024</th>
+                                <th>8:00-17:00</th>
+                                <th>Bài tập lớn</th>
+                                <th>A6-205(PC)</th>
+                                <th>204</th>
+                                <th>Đinh Xuân Giáp-22010140</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>CSE703064</th>
+                                <th>C++</th>
+                                <th>3</th>
+                                <th>24/01/2024</th>
+                                <th>8:00-17:00</th>
+                                <th>Bài tập lớn</th>
+                                <th>A6-205(PC)</th>
+                                <th>304</th>
+                                <th>Lê Viết Huấn</th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>CSE703064</th>
+                                <th>AI</th>
+                                <th>4</th>
+                                <th>24/01/2024</th>
+                                <th>8:00-17:00</th>
+                                <th>Bài tập lớn</th>
+                                <th>A6-205(PC)</th>
+                                <th>404</th>
+                                <th>Bùi MInh Đức</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>CSE703064</th>
+                                <th>Lập Trình Moblie</th>
+                                <th>5</th>
+                                <th>24/01/2024</th>
+                                <th>8:00-17:00</th>
+                                <th>Bài tập lớn</th>
+                                <th>A6-205(PC)</th>
+                                <th>204</th>
+                                <th>Nguyễn Duy</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="vanban nd" id="vanban">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Văn bản</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Văn bản, quy định, biểu mẫu</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Văn bản, quy định, biểu mẫu</p>
+                        </div>
+
+                        <table>
+                            <tr class="table-head">
+                                <th>STT</th>
+                                <th>Tên văn bản</th>
+                                <th>Số kí hiệu</th>
+                                <th>Ngày ban hành</th>
+                            </tr>
+                            <tr>
+                                <th>1</th>
+                                <th>[Thông báo] Hướng dẫn quy trình đăng ký và thực hiện thực hành bù (Áp dụng cho các
+                                    học phần có Thực hành của khối ngành Sức khỏe) </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/0BB7191626F341BFBED38AC37178DD73_202311091517116670_20210402tb53huong-da.pdf">1439/QĐ-ĐHP-ĐT</a>
+                                </th>
+                                <th>02/04/2021</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>QĐ V/v ban hành Quy định thực tập tốt nghiệp, đồ án/khóa luận tốt nghiệp của các
+                                    ngành đào tạo
+                                    đại
+                                    học theo hệ thống tín chỉ của Trường Đại học Phenikaa </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/49F1BF92E50D479BA29DC1A56191352F_202311130811176020_5-711221439qd-quy-di.pdf">1439/QĐ-ĐHP-ĐT</a>
+                                </th>
+                                <th>07/11/2022</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>[Thông báo] Công nhận đạt chuẩn đầu ra Ngoại ngữ và Tin học (Áp dụng cho các sinh
+                                    viên thuộc đợt
+                                    tuyển sinh năm 2018 đến năm 2022) </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/E97A276941E44256AC26149B0475DF29_202310261613549680_20230619tb115cong-nh.pdf">115/TB-ĐHP-ĐT</a>
+                                </th>
+                                <th>02/04/2021</th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <th>Quy định Chuẩn đầu ra Ngoại ngữ đối với sinh viên đại học hệ chính quy của Trường
+                                    Đại học
+                                    Phenikaa
+                                    (áp dụng từ khóa tuyển sinh năm 2023, K17) </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/15204252E2D847939F48C7EB81EF1C89_202309211516576190_qd-1010-14-7-23-ban-.pdf">1010/QĐ-ĐHP-ĐT</a>
+                                </th>
+                                <th>14/07/2023</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <th>Quy định tổ chức thi học phần bậc đào tạo đại học của Trường Đại học Phenikaa </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/27D17C28D95748549532D17C55D1E213_202309211524278010_so-1245-qd-dhp-dbcl-.pdf">1245/QĐ-ĐHP-ĐBCL</a>
+                                </th>
+                                <th>15/08/2023</th>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <th>V/v ban hành Quy định công nhận điểm và chuyển điểm học phần đã tích lũy</th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/DDF5EBE0B7994EB1A4FC16F6DF30D55D_202310171131517550_1502-qd-quy-dinh-con.pdf">1502/QĐ-ĐHP-ĐT</a>
+                                </th>
+                                <th>15/08/2023</th>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <th> Mẫu đơn xin thực hành bù (khối sức khỏe) </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/85B94D93B2024D669631342D74617D06_202404251130348530_don-hoc-bu-thuc-hanh.pdf">
+                                        MAU THUC HANH BU</a></th>
+                                <th>06/04/2021</th>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <th>Mẫu Đơn xin chuyển ngành </th>
+                                <th><a href="#"> MAU CHUYEN NGANH </a></th>
+                                <th>02/07/2021</th>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <th>Mẫu Đơn xin chuyển trường </th>
+                                <th><a href="#"> MAU CHUYEN TRƯƠNG </a></th>
+                                <th>02/11/2022</th>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <th>Mẫu đơn đăng ký thi bổ sung </th>
+                                <th><a target="_blank"
+                                        href="https://qldtbeta.phenikaa-uni.edu.vn/upload/ApisTinTuc/Doc/900EE00B3F754CAE9288ED523B91D553_202309261515417610_don-dang-ky-thi-bo-s.pdf">MAU
+                                        THI BS</a>
+                                </th>
+                                <th>02/10/2023</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="profile nd" id="profile">
+                    <div>
+                        <div class="nav-content">
+                            <p class="title-nav-content">
+                                <a href="#">Profile</a>
+                                <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                                <a href="#">Hồ sơ</a>
+                            </p>
+                        </div>
+                        <div class="content-infor">
+                            <div class="profile-title">
+                                <h3>Thông tin cá nhân</h3>
+                            </div>
+                            <div class="main-infor">
+                                <div class="d-flex">
+                                    <div style="width: 300px;">
+                                        <img id="personalid" src="HTMLpicture/no-avatar.png" alt="">
+                                        <div class="form-infor">
+                                            <div class="rowinfor">
+                                                <span class="info-left">Họ và tên :</span>
+                                                <span class="info-right"><b>Dương Văn Hưng</b></span>
+                                            </div>
+                                            <div class="rowinfor">
+                                                <span class="info-left">Ngày sinh :</span>
+                                                <span class="info-right">13/03/2004</span>
+                                            </div>
+                                            <div class="rowinfor">
+                                                <span class="info-left">CMND/CCCD :</span>
+                                                <span class="info-right">040204013891</span>
+                                            </div>
+                                            <div class="rowinfor">
+                                                <span class="info-left">Mã sinh viên :</span>
+                                                <span class="info-right">22010166</span>
+                                            </div>
+                                            <div class="rowinfor">
+                                                <span class="info-left">Nghành học :</span>
+                                                <span class="info-right"> CÔNG NGHỆ THÔNG TIN </span>
+                                            </div>
+                                            <div class="rowinfor">
+                                                <span class="info-left">Kế hoạch :</span>
+                                                <select class="info-right">
+                                                    <option value="data">--Không tìm thấy dữ liệu--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="Gachchan"></div>
+                                    <div>
+                                        <div class="label-right">
+                                            <span id="rl-0">Nhóm</span>
+                                            <span id="rl-1">Tên thông tin</span>
+                                            <span id="rl-1">Dữ liệu cần nhập</span>
+                                            <span id="rl-1">Xác nhận từ trường</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-button-profile">
+                                    <button type="submit">Lưu thông tin</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="congnhandiem nd" id="congnhandiem">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc học tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Công nhận điểm</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="form-top">
+                            <div class="d-flex ">
+                                <select class="col">
+                                    <option value="mark">--Không tìm thấy dữ liệu--</option>
+                                </select>
+                                <select class="col">
+                                    <option value="K16">Chọn chương trình</option>
+                                    <option value="study-nam4">Đại học Chính quy Khóa 16_4 năm Công nghệ thông tin
+                                    </option>
+                                </select>
+                                <div class="col">
+                                    <button>Xem</button>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button data-bs-toggle="dropdown" class="col">Báo cáo</button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">1. Mẫu đơn xin công nhận diểm - pdf</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-table">
+                            <div class="table-title">
+                                <button>Đăng kí</button>
+                            </div>
+                        </div>
+                        <div class="tb-congnhandiem">
+                            <table>
+                                <tr class="table-head">
+                                    <th>STT</th>
+                                    <th>Mã học phần</th>
+                                    <th>Tên học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>Kết quả đã tích lũy</th>
+                                    <th>Kết quả đã được công nhận mới</th>
+                                    <th>Đăng kí công nhận</th>
+                                    <th>Tình trạng</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="xettotnghiep nd" id="xettotnghiep">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc học tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Xét tốt nghiệp</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="form-top">
+                            <div class="d-flex">
+                                <select class="col">
+                                    <option value="K16">Chọn chương trình</option>
+                                    <option value="study-nam4">Đại học Chính quy Khóa 16_4 năm Công nghệ thông tin
+                                    </option>
+                                </select>
+                                <div class="col">
+                                    <button>Xem</button>
+                                </div>
+                                <div class="dropdown">
+                                    <button data-bs-toggle="dropdown" class="col">Báo cáo</button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">1. Mẫu đơn xin hoãn xét tốt nghiệp</a>
+                                            <a class="dropdown-item" href="#">2. Mẫu đơn xin xét tốt nghiệp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Kết quả</p>
+                        </div>
+                        <div class="tb-xettotnghiep">
+                            <table>
+                                <tr class="table-head">
+                                    <th>STT </th>
+                                    <th>Đợt xét duyệt</th>
+                                    <th>Loại xét</th>
+                                    <th>Xác nhận theo kế hoạch</th>
+                                    <th>Chứng chỉ đã có(Minh chứng)</th>
+                                    <th>Tự xét</th>
+                                    <th>Phản hồi của nhà trường</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>Xét TN về GDTC KHỐI KỸ THUẬT. Đợt 1. 2023-2024</th>
+                                    <th>Xét chứng chỉ giáo dục thể chất</th>
+                                    <th><button>Xác nhận</button></th>
+                                    <th><button class="mr-5">Khai minh chứng</button>
+                                        <button>Kết quả</button>
+                                    </th>
+                                    <th><a href="#">Chi tiết</a></th>
+                                    <th></th>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tintuc nd" id="tintuc">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Tin tức</a>
+                        </p>
+                        <div class="search-tintuc">
+                            <div class="form-group search-input">
+                                <img src="HTMLpicture/seach-news-icon.jpg" alt="">
+                                <input type="text" placeholder="Tìm kiếm thông tin">
+                            </div>
+                            <div class="form-group date-input">
+                                <input type="text" placeholder="Từ ngày">
+                                <img src="HTMLpicture/calendar-icon.jpg" alt="">
+                            </div>
+                            <div class="form-group date-input">
+                                <input type="text" placeholder="Đến ngày">
+                                <img src="HTMLpicture/calendar-icon.jpg" alt="">
+                            </div>
+                            <button>Tìm kiếm</button>
+                        </div>
+                        <div class="nav-tintuc">
+                            <a class="active" id="news-mucluc1" href="#" onclick="news_all()">Toàn bộ</a>
+                            <a href="#" id="news-mucluc2" onclick="pkt()">Phòng Đảm bảo chất lượng và khảo thí</a>
+                            <a href="#" id="news-mucluc3" onclick="pdt()">Phòng đào tạo</a>
+                            <a href="#" id="news-mucluc4" onclick="kcntt()">Phòng Khoa học Công nghệ</a>
+                            <a href="#" id="news-mucluc5" onclick="ptckt()">Phòng Tài chính kế toán</a>
+                        </div>
+                    </div>
+                    <div class="tintuc-page">
+                        <div class="row-tintuc">
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Thông báo công nhận, chuyển điểm đối với sinh viên K16
+                                            trở về trước</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Thông báo về việc đăng ký tín chỉ Học kỳ III đợt 2
+                                            (K17) năm học 2023-2024</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Thông báo v/v nghỉ Lễ Giỗ Tổ Hùng Vương, ngày Chiến
+                                            Thắng 30/4 và ngày Quốc tế Lao đông 01/5 đối với sinh viên, học viên các
+                                            bậc, các hình thức đào tạo
+                                            15/04/2024</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">THÔNG BÁO: V/v HỦY các lớp học phần đợt học 1, HK3 năm
+                                            học 2023-2024</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Thông báo công nhận, chuyển điểm đối với sinh viên
+                                            K17</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad pdt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Lịch học cao học khóa 2023 đợt 2</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad phongkhaothi">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Nhà trường tiến hành lấy ý kiến của các Bạn sinh viên
+                                            về hoạt động giảng dạy của giảng viên trong học kỳ II, năm học 2022-2023
+                                            trên cổng thông tin điện tử của Sinh viên</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad khoacntt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-cntt.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">Nhà trường tiến hành lấy ý kiến của các Bạn sinh viên
+                                            về hoạt động giảng dạy của giảng viên trong học kỳ II, năm học 2022-2023
+                                            trên cổng thông tin điện tử của Sinh viên</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad phongtckt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">V/v thu bổ sung học phí kỳ 1 năm học 2022 - 2023 đối
+                                            với sinh viên Khóa 16</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wid-pad phongtckt">
+                                <div class="col-tintuc box-shadow">
+                                    <a class="image" href="#">
+                                        <img src="HTMLpicture/news-img.jpg" alt="">
+                                    </a>
+                                    <div class="tintuc-content">
+                                        <a class="title" href="#">V/v thu học phí học kỳ 1 năm học 2022-2023</a>
+                                        <p><a href="">Xem chi tiết</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dkhoc nd" id="dkhoc">
+                    <div>
+                        <div class="nav-content">
+                            <p class="title-nav-content">
+                                <a href="#">Đăng kí trực tuyến</a>
+                                <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                                <a href="#">Đăng kí học</a>
+                            </p>
+                        </div>
+                        <div class="cl">
+                        <div class="cl-left">
+                            <div class="cl-l1">
+                                <p><b>Lê Viết Huấn</b></p>
+                                <img id="personalid" src="HTMLpicture/no-avatar.png" alt="">
+                                <p>Số dư tài khoản hiện tại:        0    </p>
+                                <p>Số phát sinh thêm trong đợt:            0</p>
+                                <p>Tổng lớp đã đăng kí              50</p>
+                                <p>Tổng số tín chỉ đã đăng kí:            0<p>
+                                <p>Số tín chỉ tối đa:   0 </p>
+                                <p>Số tín chỉ tối thiểu:  0</p>
+                            </div>
+                            <div class="cl-l2">
+                                <div class="label">
+                                    <i class="fal fa-filter"></i>
+                                    <b><p>Bộ lọc tìm kiếm</p></b>
+                                    <i class="fal fa-sort-down"></i>
+                                    <b><p> Giảng viên</p></b>
+                                    <b><p>Thứ học</p></b>
+                                    <b><p>Phương án đăng kí</p></b>
+                                    <div class="tick">
+                                        <input type="checkbox" name="tick" id="tick">
+                                        <label for="tick">Lọc trùng</label>
+                                    </div>
+                                    <p><a href="#">
+                                        <i class="fal fa-search"></i>
+                                        Tim kiếm
+                                    </a></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="cl-right">
+                            <div class="box123">
+                                <span class="title123">Chương trình đào tạo</span>
+                                <button class="button123">Đại học Chính quy Khóa 16_ 4 năm - Công nghệ thông tin</button>
+                            </div>
+                            <div class="box123">
+                                <span class="title123">Kế hoạch</span>
+                            </div>
+                            <div class="box123">
+                                <span class="title123">Học phần</span>
+                                <input type="text" class="search-box" placeholder="Tìm kiếm học phần">
+                            </div>
+                            <div class="box123">
+                                <span class="title123">Lớp học phần</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dknv nd" id="dknv">
+                <div class="nav-content">
+                    <p class="title-nav-content">
+                        <a href="#">Đăng ký trực tuyến</a>
+                        <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                        <a href="#">Đăng ký nguyện vọng</a>
+                    </p>
+                </div>
+                <div class="table-bg box-shadow">
+                    <div class="table-title">
+                        <p class="color-dask-blue fw-bold mg-top">Danh sách các nguyện vọng chưa đăng ký</p>
+                    </div>
+                    <table>
+                        <tr class="table-head">
+                            <th>STT</th>
+                            <th>Mã học phần</th>
+                            <th>Tên học phần</th>
+                            <th>Số tín chỉ</th>
+                            <th>Kết quả</th>
+                            <th>Đánh giá</th>
+                            <th>Quy mô</th>
+                            <th>Hình thức học</th>
+                            <th>Điều kiện ràng buộc</th>
+                            <th>Khối kiến thức</th>
+                            <th>Phân kỳ theo chương trình</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>CSE101</td>
+                            <td>Lập trình Cơ bản</td>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td>50</td>
+                            <td>Trực tiếp</td>
+                            <td>Không</td>
+                            <td>Cơ bản</td>
+                            <td>Kỳ 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CSE102</td>
+                            <td>Cấu trúc dữ liệu và giải thuật</td>
+                            <td>4</td>
+                            <td></td>
+                            <td></td>
+                            <td>50</td>
+                            <td>Trực tiếp</td>
+                            <td>Không</td>
+                            <td>Cơ bản</td>
+                            <td>Kỳ 2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CSE103</td>
+                            <td>Lập trình hướng đối tượng</td>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td>50</td>
+                            <td>Trực tiếp</td>
+                            <td>Không</td>
+                            <td>Cơ bản</td>
+                            <td>Kỳ 3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CSE104</td>
+                            <td>Cơ sở dữ liệu</td>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td>50</td>
+                            <td>Trực tiếp</td>
+                            <td>Không</td>
+                            <td>Cơ bản</td>
+                            <td>Kỳ 3</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>CSE105</td>
+                            <td>Mạng máy tính</td>
+                            <td>3</td>
+                            <td></td>
+                            <td></td>
+                            <td>50</td>
+                            <td>Trực tiếp</td>
+                            <td>Không</td>
+                            <td>Cơ bản</td>
+                            <td>Kỳ 3</td>
+                        </tr>
+                    </table>
+                    <div class="form-top">
+                        <button class="btn-primary">Đăng ký</button>
+                        <button class="btn-secondary">Hủy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="kqdk nd" id="kqdk">
+                <div class="nav-content">
+                    <p class="title-nav-content">
+                        <a href="#">Đăng ký trực tuyến</a>
+                        <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                        <a href="#">Tra cứu kết quả đăng ký</a>
+                    </p>
+                </div>
+                <div class="table-bg box-shadow">
+                    <div class="table-title">
+                        <p class="color-dask-blue fw-bold mg-top">Kết quả đăng ký học kỳ 2024_2025_1</p>
+                    </div>
+                    <table>
+                        <tr class="table-head">
+                            <th>STT</th>
+                            <th>Môn học</th>
+                            <th>Lớp học</th>
+                            <th>Loại lớp</th>
+                            <th>Thời gian</th>
+                            <th>Tổng số</th>
+                            <th>Thứ</th>
+                            <th>Đã đăng ký</th>
+                            <th>Giá môn học </th>
+                            
+                            <th>Xem chi tiết</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>An toàn và bảo mật thông tin</td>
+                            <td>An toàn và bảo mật thông tin-1-1-24(N0101)</td>
+                            <td>Thực hành</td>
+                            <td>09/09/2024 - 20/10/2024</td>
+                            <td>45</td>
+                            <td>4,6</td>
+                            <td>46</td>
+                            <td>0</td>
+                            
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>An toàn và bảo mật thông tin</td>
+                            <td>An toàn và bảo mật thông tin-1-1-24(N01)</td>
+                            <td>Lý thuyết</td>
+                            <td>19/08/2024 - 13/10/2024</td>
+                            <td>90</td>
+                            <td>2,5</td>
+                            <td>93</td>
+                            <td>2,233,000</td>
+                            
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Tư tưởng Hồ Chí Minh</td>
+                            <td>Tư tưởng Hồ Chí Minh-1-1-24(N03)</td>
+                            <td>Elearning</td>
+                            <td>19/08/2024 - 27/10/2024</td>
+                            <td>800</td>
+                            <td>4,6</td>
+                            <td>800</td>
+                            <td>1,276,000</td>
+                          
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Kỹ thuật phần mềm</td>
+                            <td>Kỹ thuật phần mềm-1-1-24(N04)</td>
+                            <td>Lý thuyết</td>
+                            <td>19/08/2024 - 13/10/2024</td>
+                            <td>40</td>
+                            <td>3,7</td>
+                            <td>30</td>
+                            <td>1,435,500</td>
+                          
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mạng máy tính</td>
+                            <td>Mạng máy tính-1-1-24(EL05).ELN</td>
+                            <td>Elearning</td>
+                            <td>19/08/2024 - 13/10/2024</td>
+                            <td>500</td>
+                            <td>6</td>
+                            <td>400</td>
+                            <td>1,276,000</td>
+                            
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Mạng máy tính</td>
+                            <td>Mạng máy tính-1-1-24(N02)</td>
+                            <td>Thực hành</td>
+                            <td>19/08/2024 - 13/10/2024</td>
+                            <td>120</td>
+                            <td>4</td>
+                            <td>117</td>
+                            <td>0</td>
+                            
+                            <td><a href="#">Xem chi tiết</a></td>
+                        </tr>
+                    </table>
+                    <div class="form-top">
+                        <button class="btn-primary">Xuất báo cáo</button>
+                        <button class="btn-secondary">In kết quả</button>
+                    </div>
+                </div>
+            </div>
+                <div class="hocphi nd" id="hocphi">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Tài chính</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Học phí</a>
+                        </p>
+                        <div class="d-flex justify-content-between">
+                            <div class="fee-left">
+                                <p>Dương Văn Hưng</p>
+                                <p>
+                                    Mã: <span>22010166</span>
+                                    - SĐT: <span>0398679031</span>
+                                </p>
+                                <p>
+                                    Tổng dư: 8,761,325 đ
+                                </p>
+                            </div>
+                            <div class="fee-right">
+                                <a href="#" class="btn">
+                                    <img src="HTMLpicture/fee-huongdan.jpg" alt="">
+                                    <span>Hướng dẫn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hocphi-contain">
+                        <div class="col-fee">
+                            <div class="fee-item" style="border-color: #0e9347;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #0e9347;">59,561,526</p>
+                                    <p>Khoản phải nộp</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-1.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #c97629;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #c97629;">46,690,001</p>
+                                    <p>Khoản được miễn</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-2.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #3d8ac7;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #3d8ac7;">21,632,850</p>
+                                    <p>Khoản đã nộp</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-3.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #ed5729;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #ed5729;">0</p>
+                                    <p>Khoản đã rút</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-1.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #a56a43;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #a56a43;">0</p>
+                                    <p>Tổng nợ chung các khoản</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-6.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #29703c;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #29703c;">8,761,325</p>
+                                    <p>Tổng dư chung các khoản</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-8.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #285680;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #285680;">13,928,141</p>
+                                    <p>Danh sách phiếu đã thu</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-9.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #e80002;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #e80002;">0</p>
+                                    <p>Danh sách phiếu đã rút</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-10.png" alt="">
+                            </div>
+                            <div class="fee-item" style="border-color: #0094e3;">
+                                <div class="fee-title">
+                                    <p class="amount" style="color: #0094e3;">0</p>
+                                    <p>Danh sách phiếu hóa đơn</p>
+                                    <button type="button" onclick="overlayfee()">
+                                        <span>Chi tiết</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <img src="HTMLpicture/finance-icon-11.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-fee">
+                <div class="contain-fee">
+                    <div class="fee-detail">
+                        <div class="detail-head">
+                            <p>Danh sách khoản phải nộp</p>
+                            <button class="btn-close" onclick="btn_close()"></button>
+                        </div>
+                        <div class="detail-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Stt</th>
+                                        <th>Học kỳ</th>
+                                        <th>Đợt</th>
+                                        <th>Loại khoản</th>
+                                        <th>Nội dung</th>
+                                        <th>Số tiền</th>
+                                        <th>Ngày tạo</th>
+                                        <th>Người tạo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn HưngHưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn HưngHưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn HưngHưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn HưngHưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2023_2024_2</td>
+                                        <td>1</td>
+                                        <td>Học phí</td>
+                                        <td></td>
+                                        <td style="text-align: right;">1,740,000</td>
+                                        <td>13/01/2024</td>
+                                        <td>Dương Văn Hưng</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>Tổng</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="text-align: right;">59,561,526</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <marquee behavior="" direction="">Dương Văn Hưng</marquee>
+        </div>
+    </div>
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
