@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận thanh toán</title>
+    <link rel="stylesheet" href="css/payment_page.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Xác nhận thanh toán</h2>
+        <p><strong>Ngân hàng:</strong> <span id="selected-bank"></span></p>
+        <p><strong>Số tiền cần thanh toán:</strong> <span id="payment-amount"></span> VND</p>
+        
+        <button onclick="confirmPayment()">Xác nhận</button>
+        <button onclick="goBack()">Quay lại</button>
+    </div>
+
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                amount: params.get("amount"),
+                bank: params.get("bank")
+            };
+        }
+
+        function confirmPayment() {
+            alert("Thanh toán thành công!");
+            window.location.href = "main.html"; // Quay lại trang chính
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = getQueryParams();
+            document.getElementById("selected-bank").textContent = params.bank || "Chưa chọn";
+            document.getElementById("payment-amount").textContent = Number(params.amount).toLocaleString() || "0";
+        });
+    </script>
+</body>
+</html>

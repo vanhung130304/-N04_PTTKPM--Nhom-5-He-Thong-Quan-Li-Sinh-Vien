@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán học phí</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Thanh toán học phí online</h2>
+        
+        <div class="personal-info">
+            <h3>THÔNG TIN CÁ NHÂN</h3>
+            <div class="info-grid">
+                <p><strong>Họ tên:</strong> Đinh Xuân Giáp</p>
+                <p><strong>Mã sinh viên:</strong> 22010140</p>
+                <p><strong>Ngày sinh:</strong> 31/3/2004</p>
+                <p><strong>Ngành:</strong> Công nghệ thông tin</p>
+                <p><strong>Lớp:</strong> K16-CNTT_2</p>
+                <p><strong>Khóa:</strong> Đại học Chính quy Khóa 16 - 4 năm</p>
+            </div>
+        </div>
+        
+        <h3>Thông tin thanh toán</h3>
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Nội dung</th>
+                    <th>Số tiền</th>
+                    <th>Ghi chú</th>
+                    <th>Chọn</th>
+                </tr>
+            </thead>
+            <tbody id="fee-list">
+                <tr>
+                    <td>1</td>
+                    <td>Học phí học kỳ 1</td>
+                    <td>5,000,000 VND</td>
+                    <td></td>
+                    <td><input type="checkbox" class="fee-checkbox" data-amount="5000000"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Học phí học kỳ 2</td>
+                    <td>5,500,000 VND</td>
+                    <td></td>
+                    <td><input type="checkbox" class="fee-checkbox" data-amount="5500000"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Phí tài liệu</td>
+                    <td>500,000 VND</td>
+                    <td></td>
+                    <td><input type="checkbox" class="fee-checkbox" data-amount="500000"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="payment-options">
+            <label for="bank"><i class="fa-solid fa-credit-card"></i> Chọn ngân hàng:</label>
+            <select id="bank">
+                <option value="">-- Chọn ngân hàng --</option>
+                <option value="vcb">Vietcombank</option>
+                <option value="acb">ACB</option>
+                <option value="techcombank">Techcombank</option>
+            </select>
+            
+            <button class="pay-btn" onclick="processPayment()">
+                <i class="fa-solid fa-paper-plane"></i> Thực hiện thanh toán
+            </button>
+        </div>
+        <p id="total-amount" class="total-text">Tổng tiền đã chọn: 0</p>
+    </div>
+    
+    <script src="javascript/payment.js"></script>
+</body>
+</html>

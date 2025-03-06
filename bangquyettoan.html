@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng quyết toán cá nhân</title>
+    <link rel="stylesheet" href="css/bangquyettoan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="page-title">Bảng chi tiết quyết toán học phí</h2>
+        
+        <div class="personal-info">
+            <div class="info-grid">
+                <div>
+                    <p><strong>Họ tên:</strong> Đinh Xuân Giáp</p>
+                    <p><strong>Mã số:</strong> 22010140</p>
+                    <p><strong>Lớp:</strong> K16-CNTT_2</p>
+                </div>
+                <div>
+                    <p><strong>Ngành trước khi chuyển:</strong> - </p>
+                    <p><strong>Ngành đang học:</strong> Công nghệ thông tin</p>
+                </div>
+            </div>
+        </div>
+
+        <table class="payment-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Nội dung</th>
+                    <th>Giá trị</th>
+                    <th>Đơn vị</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Học phí học kỳ 1</td>
+                    <td>5,000,000</td>
+                    <td>VND</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Học phí học kỳ 2</td>
+                    <td>5,500,000</td>
+                    <td>VND</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Phí tài liệu</td>
+                    <td>500,000</td>
+                    <td>VND</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="back-home-btn" onclick="goBackHome()">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ
+        </button>
+    
+        <script>
+            function goBackHome() {
+                window.location.href = "main.html"; 
+            }
+        </script>
+    
+    </div>
+</body>
+</html>
