@@ -226,6 +226,7 @@ function hideAllSections() {
     document.getElementById('dkhoc').style.display = 'none';
     document.getElementById('dknv').style.display = 'none';
     document.getElementById('kqdk').style.display = 'none';
+    document.getElementById('bqt').style.display = 'none';
     // Ẩn các phần tử khác nếu cần
 }
 
