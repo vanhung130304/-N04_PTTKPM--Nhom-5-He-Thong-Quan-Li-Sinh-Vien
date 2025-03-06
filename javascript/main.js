@@ -243,3 +243,107 @@ function kqdk(){
     document.getElementById("kqdk").scrollTop=0;
     document.getElementById("kqdk").style.display="block";
 };
+function bangdiem() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("bangdiem");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc1").classList.toggle("active");
+};
+function hocphanno() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("hocphanno");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc2").classList.toggle("active");
+};
+function khoikienthuc() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("khoikienthuc");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc3").classList.toggle("active");
+};
+function kqdkh() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("kqdkh");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc4").classList.toggle("active");
+};
+function quyetdinh() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("quyetdinh");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc5").classList.toggle("active");
+};
+function vanbancc() {
+    var ele = document.getElementsByClassName("wid-pad");
+    var ptckt = document.getElementsByClassName("vanbancc");
+    for (let i = 0; i < ele.length; i++) {
+        ele[i].style.display = "none";
+    }
+    for (let i = 0; i < ptckt.length; i++) {
+        ptckt[i].style.display = "block";
+    }
+    document.querySelector(".nav-tintuc .active").classList.toggle("active");
+    document.getElementById("diem-mucluc6").classList.toggle("active");
+};
+function tracuudiem() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display != "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    bangdiem();
+    document.getElementById("tracuudiem").scrollTop = 0;
+    document.getElementById("tracuudiem").style.display = "block";
+};
+function chuongtrinhhoc() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display != "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    document.getElementById("chuongtrinhhoc").scrollTop = 0;
+    document.getElementById("chuongtrinhhoc").style.display = "block";
+};
+
+function dangkyphuckhao() {
+    var nd = document.getElementsByClassName("nd");
+    for (let i = 0; i < nd.length; i++) {
+        if (nd[i].style.display != "none") {
+            nd[i].style.display = "none";
+        }
+    }
+    document.getElementById("dangkyphuckhao").scrollTop = 0;
+    document.getElementById("dangkyphuckhao").style.display = "block";
+};

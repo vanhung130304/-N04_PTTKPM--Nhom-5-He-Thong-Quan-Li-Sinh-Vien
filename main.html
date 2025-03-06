@@ -67,8 +67,8 @@
                     <div id="collapse2" class="menu-bosung collapse" data-bs-parent="#menu-bottom">
                         <a href="#" onclick="danhsachhs()">Danh sách học sinh</a>
                         <a href="#" onclick="tracuudiem()">Tra cứu điểm</a>
-                        <a href="#" onclick="temppage()">Chương trình học</a>
-                        <a href="#" onclick="temppage()">Đăng ký xin phúc khảo</a>
+                        <a href="#" onclick="chuongtrinhhoc()">Chương trình học</a>
+                        <a href="#" onclick="dangkyphuckhao()">Đăng ký xin phúc khảo</a>
                         <a onclick="congnhandiem()" href="#">Công nhận điểm</a>
                         <a onclick="xettotnghiep()" href="#">Xét tốt nghiệp</a>
                     </div>
@@ -271,89 +271,1473 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="Trangtracuudiem nd" id="tracuudiem">
+
+                <div class="tracuudiem tintuc nd" id="tracuudiem">
                     <div class="nav-content">
                         <p class="title-nav-content">
-                            <a href="#">Góc hoc tập</a>
-                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
                             <a href="#">Tra cứu điểm</a>
+                        </p>
+                        <div class="search-tintuc">
+                            <div class="form-group search-input">
+                                <img src="HTMLpicture/seach-news-icon.jpg" alt="">
+                                <input type="text" placeholder="Tìm kiếm thông tin">
+                            </div>
+
+                            <button>Tìm kiếm</button>
+                        </div>
+                        <div class="nav-tintuc">
+                            <a id="diem-mucluc1" href="#" onclick="bangdiem()">Bảng điểm</a>
+                            <a href="#" id="diem-mucluc2" onclick="hocphanno()">Học phần nợ</a>
+                            <a href="#" id="diem-mucluc3" onclick="khoikienthuc()">Khối kiến thức</a>
+                            <a href="#" id="diem-mucluc4" onclick="kqdkh()">Kết quả đăng ký học</a>
+                            <a href="#" id="diem-mucluc5" onclick="quyetdinh()">Quyết định</a>
+                            <a href="#" id="diem-mucluc6" onclick="vanbancc()">Văn bằng - chứng chỉ</a>
+                        </div>
+                    </div>
+                    <div class="tintuc-page">
+                        <div class="row-tintuc" style="width: 99%;">
+                            <div class="wid-pad bangdiem" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Các học phần đã học</p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="wid-pad hocphanno" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Các học phần đã nợ </p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="wid-pad khoikienthuc" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Khối kiến thức </p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="wid-pad quyetdinh" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Quyết định </p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="wid-pad vanbancc" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Văn bằng - Chứng chỉ </p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="wid-pad kqdkh" style="width: 99%;">
+                                <div class="table-bg box-shadow">
+                                    <div class="table-title">
+                                        <p class="color-dask-blue fw-bold mg-top">Kết quả đăng kí học</p>
+                                    </div>
+                                    <table>
+                                        <tr class="table-head">
+                                            <th rowspan="2">Stt</th>
+                                            <th rowspan="2">Môn học</th>
+                                            <th rowspan="2">Mã lớp học</th>
+                                            <th rowspan="2">Thời gian</th>
+                                            <th rowspan="2">Điểm danh</th>
+                                            <th colspan="3">Điểm quá trình</th>
+                                        </tr>
+                                        <tr class="table-head">
+                                            <th>CC1</th>
+                                            <th>CC2</th>
+                                            <th>LT1</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <th>AI</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <th>C++</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                            <th>9</th>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <th>Giải Tích</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>10</th>
+                                            <th>10</th>
+                                            <th>9</th>
+                                            <th>10</th>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <th>Pháp Luật Đại Cương</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                            <th>8</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <th>Toán Rời Rạc</th>
+                                            <th>N02</th>
+                                            <th>15/03-15/06</th>
+                                            <th>8</th>
+                                            <th>9</th>
+                                            <th>7</th>
+                                            <th>7</th>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="chuongtrinhhoc nd" id="chuongtrinhhoc">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc học tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Chương trình học</a>
                         </p>
                     </div>
                     <div class="table-bg box-shadow">
-                        <div class="table-title">
-                            <p class="color-dask-blue fw-bold mg-top">Các học phần đã học</p>
+                        <div class="form-top">
+                            <div class="d-flex ">
+                                <select class="col">
+                                    <option value="K16">Chọn chương trình</option>
+                                    <option value="study-nam4">Đại học Chính quy Khóa 16_4 năm Công nghệ thông tin
+                                    </option>
+                                </select>
+                                <div class="col" style="margin-left: 50px;">
+                                    <button>Xem</button>
+                                </div>
+
+                            </div>
+
                         </div>
-                        <table>
-                            <tr class="table-head">
-                                <th rowspan="2">Stt</th>
-                                <th rowspan="2">Môn học</th>
-                                <th rowspan="2">Mã lớp học</th>
-                                <th rowspan="2">Thời gian</th>
-                                <th rowspan="2">Điểm danh</th>
-                                <th colspan="3">Điểm quá trình</th>
-                            </tr>
-                            <tr class="table-head">
-                                <th>CC1</th>
-                                <th>CC2</th>
-                                <th>LT1</th>
-                            </tr>
-                            <tr>
-                                <th>1</th>
-                                <th>AI</th>
-                                <th>N02</th>
-                                <th>15/03-15/06</th>
-                                <th>10</th>
-                                <th>10</th>
-                                <th>10</th>
-                                <th>10</th>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <th>C++</th>
-                                <th>N02</th>
-                                <th>15/03-15/06</th>
-                                <th>9</th>
-                                <th>9</th>
-                                <th>9</th>
-                                <th>9</th>
-                            </tr>
-                            <tr>
-                                <th>3</th>
-                                <th>Giải Tích</th>
-                                <th>N02</th>
-                                <th>15/03-15/06</th>
-                                <th>10</th>
-                                <th>10</th>
-                                <th>9</th>
-                                <th>10</th>
-                            </tr>
-                            <tr>
-                                <th>4</th>
-                                <th>Pháp Luật Đại Cương</th>
-                                <th>N02</th>
-                                <th>15/03-15/06</th>
-                                <th>8</th>
-                                <th>8</th>
-                                <th>8</th>
-                                <th>8</th>
-                            </tr>
-                            <tr>
-                                <th>5</th>
-                                <th>Toán Rời Rạc</th>
-                                <th>N02</th>
-                                <th>15/03-15/06</th>
-                                <th>8</th>
-                                <th>9</th>
-                                <th>7</th>
-                                <th>7</th>
-                            </tr>
-                           
+                        <div class="nav-table">
+                            <div class="table-title">
+                                <p class="color-dask-blue fw-bold mg-top">Nội dung học phần theo chương trình:</p>
+                                <p class="color-dask-blue fw-bold mg-top" style="margin-left: auto;
+                                margin-right: 100px;">Tổng số tín chỉ: 136</p>
+                            </div>
+                        </div>
+                        <div class="tb-congnhandiem">
+                            <table>
+                                <tr class="table-head">
+                                    <th>STT</th>
+                                    <th>Mã học phần</th>
+                                    <th>Tên học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>Điều kiện ràng buộc</th>
+                                    <th>Học kỳ dự kiến</th>
+                                    <th>Học kỳ thực tế</th>
+                                    <th>Chi tiết</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th>
+                                        <span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th></th>
+                                    <th>2022_2023, Ky 1</th>
+                                    <th></th>
+                                    <th><span class="hover">
+                                            <img src="HTMLpicture/detail-icon.jpg" alt="">
+                                        </span></th>
+                                </tr>
+                            </table>
+                        </div>
 
-
-                        </table>
                     </div>
                 </div>
+
+                <div class="dangkyphuckhao nd" id="dangkyphuckhao">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Góc học tập</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Đăng ký xin phúc khảo</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="form-top">
+                            <div class="d-flex ">
+                                <select class="col">
+                                    <option value="K16">Chọn chương trình</option>
+                                    <option value="study-nam4">Đại học Chính quy Khóa 16_4 năm Công nghệ thông tin
+                                    </option>
+                                </select>
+                                <div class="col" style="margin-left: 50px;">
+                                    <button>Xem</button>
+                                </div>
+                                <div class="col" style="margin-left: 50px;">
+                                    <button><a
+                                            href="https://qldtbeta.phenikaa-uni.edu.vn/congsinhvien/upload/HuongDanDangKyPhucKhao.pdf"
+                                            target="_blank" class="btn-hddk">Hướng dẫn đăng ký</a></button>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button data-bs-toggle="dropdown" class="col">Báo cáo</button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="#">1. Mẫu đơn xin phúc khảo - pdf</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="nav-table">
+                            <div class="table-title">
+                                <p class="color-dask-blue fw-bold mg-top">Các học phần đã
+                                    học</p>
+                                <button class="btn-dky-phuckhao">ĐĂNG KÝ</button>
+                            </div>
+                        </div>
+                        <div class="tb-congnhandiem">
+                            <table>
+                                <tr class="table-head">
+                                    <th>STT</th>
+                                    <th>Mã học phần</th>
+                                    <th>Tên học phần</th>
+                                    <th>Số tín chỉ</th>
+                                    <th>Kết quả thi</th>
+                                    <th>Kết quả sau khi phúc khảo</th>
+                                    <th>Đăng kí công nhận</th>
+                                    <th>Tình trạng</th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <th>BS12006</th>
+                                    <th>Giáo dục thể chất 3</th>
+                                    <th>1</th>
+                                    <th>7.5</th>
+                                    <th></th>
+                                    <th>
+                                        <div>
+                                            <input type="checkbox" name="clickdangki" id="clickdangki">
+                                            <span>Đăng kí</span>
+                                        </div>
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
 
                 <div class="Danhsach nd" id="danhsachhs">
                     <div class="nav-content">
@@ -420,7 +1804,7 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="Lichthi nd" id="lichthi">
                     <div class="nav-content">
                         <p class="title-nav-content">
@@ -1280,265 +2664,275 @@
                             </p>
                         </div>
                         <div class="cl">
-                        <div class="cl-left">
-                            <div class="cl-l1">
-                                <p><b>Lê Viết Huấn</b></p>
-                                <img id="personalid" src="HTMLpicture/no-avatar.png" alt="">
-                                <p>Số dư tài khoản hiện tại:        0    </p>
-                                <p>Số phát sinh thêm trong đợt:            0</p>
-                                <p>Tổng lớp đã đăng kí              50</p>
-                                <p>Tổng số tín chỉ đã đăng kí:            0<p>
-                                <p>Số tín chỉ tối đa:   0 </p>
-                                <p>Số tín chỉ tối thiểu:  0</p>
-                            </div>
-                            <div class="cl-l2">
-                                <div class="label">
-                                    <i class="fal fa-filter"></i>
-                                    <b><p>Bộ lọc tìm kiếm</p></b>
-                                    <i class="fal fa-sort-down"></i>
-                                    <b><p> Giảng viên</p></b>
-                                    <b><p>Thứ học</p></b>
-                                    <b><p>Phương án đăng kí</p></b>
-                                    <div class="tick">
-                                        <input type="checkbox" name="tick" id="tick">
-                                        <label for="tick">Lọc trùng</label>
-                                    </div>
-                                    <p><a href="#">
-                                        <i class="fal fa-search"></i>
-                                        Tim kiếm
-                                    </a></p>
+                            <div class="cl-left">
+                                <div class="cl-l1">
+                                    <p><b>Lê Viết Huấn</b></p>
+                                    <img id="personalid" src="HTMLpicture/no-avatar.png" alt="">
+                                    <p>Số dư tài khoản hiện tại: 0 </p>
+                                    <p>Số phát sinh thêm trong đợt: 0</p>
+                                    <p>Tổng lớp đã đăng kí 50</p>
+                                    <p>Tổng số tín chỉ đã đăng kí: 0
+                                    <p>
+                                    <p>Số tín chỉ tối đa: 0 </p>
+                                    <p>Số tín chỉ tối thiểu: 0</p>
                                 </div>
-                                
+                                <div class="cl-l2">
+                                    <div class="label">
+                                        <i class="fal fa-filter"></i>
+                                        <b>
+                                            <p>Bộ lọc tìm kiếm</p>
+                                        </b>
+                                        <i class="fal fa-sort-down"></i>
+                                        <b>
+                                            <p> Giảng viên</p>
+                                        </b>
+                                        <b>
+                                            <p>Thứ học</p>
+                                        </b>
+                                        <b>
+                                            <p>Phương án đăng kí</p>
+                                        </b>
+                                        <div class="tick">
+                                            <input type="checkbox" name="tick" id="tick">
+                                            <label for="tick">Lọc trùng</label>
+                                        </div>
+                                        <p><a href="#">
+                                                <i class="fal fa-search"></i>
+                                                Tim kiếm
+                                            </a></p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="cl-right">
+                                <div class="box123">
+                                    <span class="title123">Chương trình đào tạo</span>
+                                    <button class="button123">Đại học Chính quy Khóa 16_ 4 năm - Công nghệ thông
+                                        tin</button>
+                                </div>
+                                <div class="box123">
+                                    <span class="title123">Kế hoạch</span>
+                                </div>
+                                <div class="box123">
+                                    <span class="title123">Học phần</span>
+                                    <input type="text" class="search-box" placeholder="Tìm kiếm học phần">
+                                </div>
+                                <div class="box123">
+                                    <span class="title123">Lớp học phần</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="cl-right">
-                            <div class="box123">
-                                <span class="title123">Chương trình đào tạo</span>
-                                <button class="button123">Đại học Chính quy Khóa 16_ 4 năm - Công nghệ thông tin</button>
-                            </div>
-                            <div class="box123">
-                                <span class="title123">Kế hoạch</span>
-                            </div>
-                            <div class="box123">
-                                <span class="title123">Học phần</span>
-                                <input type="text" class="search-box" placeholder="Tìm kiếm học phần">
-                            </div>
-                            <div class="box123">
-                                <span class="title123">Lớp học phần</span>
-                            </div>
+                    </div>
+                </div>
+                <div class="dknv nd" id="dknv">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Đăng ký trực tuyến</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Đăng ký nguyện vọng</a>
+                        </p>
+                    </div>
+                    <div class="table-bg box-shadow">
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Danh sách các nguyện vọng chưa đăng ký</p>
+                        </div>
+                        <table>
+                            <tr class="table-head">
+                                <th>STT</th>
+                                <th>Mã học phần</th>
+                                <th>Tên học phần</th>
+                                <th>Số tín chỉ</th>
+                                <th>Kết quả</th>
+                                <th>Đánh giá</th>
+                                <th>Quy mô</th>
+                                <th>Hình thức học</th>
+                                <th>Điều kiện ràng buộc</th>
+                                <th>Khối kiến thức</th>
+                                <th>Phân kỳ theo chương trình</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>CSE101</td>
+                                <td>Lập trình Cơ bản</td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>50</td>
+                                <td>Trực tiếp</td>
+                                <td>Không</td>
+                                <td>Cơ bản</td>
+                                <td>Kỳ 1</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>CSE102</td>
+                                <td>Cấu trúc dữ liệu và giải thuật</td>
+                                <td>4</td>
+                                <td></td>
+                                <td></td>
+                                <td>50</td>
+                                <td>Trực tiếp</td>
+                                <td>Không</td>
+                                <td>Cơ bản</td>
+                                <td>Kỳ 2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>CSE103</td>
+                                <td>Lập trình hướng đối tượng</td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>50</td>
+                                <td>Trực tiếp</td>
+                                <td>Không</td>
+                                <td>Cơ bản</td>
+                                <td>Kỳ 3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>CSE104</td>
+                                <td>Cơ sở dữ liệu</td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>50</td>
+                                <td>Trực tiếp</td>
+                                <td>Không</td>
+                                <td>Cơ bản</td>
+                                <td>Kỳ 3</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>CSE105</td>
+                                <td>Mạng máy tính</td>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td>50</td>
+                                <td>Trực tiếp</td>
+                                <td>Không</td>
+                                <td>Cơ bản</td>
+                                <td>Kỳ 3</td>
+                            </tr>
+                        </table>
+                        <div class="form-top">
+                            <button class="btn-primary">Đăng ký</button>
+                            <button class="btn-secondary">Hủy</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="dknv nd" id="dknv">
-                <div class="nav-content">
-                    <p class="title-nav-content">
-                        <a href="#">Đăng ký trực tuyến</a>
-                        <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
-                        <a href="#">Đăng ký nguyện vọng</a>
-                    </p>
-                </div>
-                <div class="table-bg box-shadow">
-                    <div class="table-title">
-                        <p class="color-dask-blue fw-bold mg-top">Danh sách các nguyện vọng chưa đăng ký</p>
+                <div class="kqdk nd" id="kqdk">
+                    <div class="nav-content">
+                        <p class="title-nav-content">
+                            <a href="#">Đăng ký trực tuyến</a>
+                            <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
+                            <a href="#">Tra cứu kết quả đăng ký</a>
+                        </p>
                     </div>
-                    <table>
-                        <tr class="table-head">
-                            <th>STT</th>
-                            <th>Mã học phần</th>
-                            <th>Tên học phần</th>
-                            <th>Số tín chỉ</th>
-                            <th>Kết quả</th>
-                            <th>Đánh giá</th>
-                            <th>Quy mô</th>
-                            <th>Hình thức học</th>
-                            <th>Điều kiện ràng buộc</th>
-                            <th>Khối kiến thức</th>
-                            <th>Phân kỳ theo chương trình</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>CSE101</td>
-                            <td>Lập trình Cơ bản</td>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                            <td>50</td>
-                            <td>Trực tiếp</td>
-                            <td>Không</td>
-                            <td>Cơ bản</td>
-                            <td>Kỳ 1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>CSE102</td>
-                            <td>Cấu trúc dữ liệu và giải thuật</td>
-                            <td>4</td>
-                            <td></td>
-                            <td></td>
-                            <td>50</td>
-                            <td>Trực tiếp</td>
-                            <td>Không</td>
-                            <td>Cơ bản</td>
-                            <td>Kỳ 2</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>CSE103</td>
-                            <td>Lập trình hướng đối tượng</td>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                            <td>50</td>
-                            <td>Trực tiếp</td>
-                            <td>Không</td>
-                            <td>Cơ bản</td>
-                            <td>Kỳ 3</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>CSE104</td>
-                            <td>Cơ sở dữ liệu</td>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                            <td>50</td>
-                            <td>Trực tiếp</td>
-                            <td>Không</td>
-                            <td>Cơ bản</td>
-                            <td>Kỳ 3</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>CSE105</td>
-                            <td>Mạng máy tính</td>
-                            <td>3</td>
-                            <td></td>
-                            <td></td>
-                            <td>50</td>
-                            <td>Trực tiếp</td>
-                            <td>Không</td>
-                            <td>Cơ bản</td>
-                            <td>Kỳ 3</td>
-                        </tr>
-                    </table>
-                    <div class="form-top">
-                        <button class="btn-primary">Đăng ký</button>
-                        <button class="btn-secondary">Hủy</button>
-                    </div>
-                </div>
-            </div>
-            <div class="kqdk nd" id="kqdk">
-                <div class="nav-content">
-                    <p class="title-nav-content">
-                        <a href="#">Đăng ký trực tuyến</a>
-                        <img src="./HTMLpicture/arrowicon-title.jpg" alt="">
-                        <a href="#">Tra cứu kết quả đăng ký</a>
-                    </p>
-                </div>
-                <div class="table-bg box-shadow">
-                    <div class="table-title">
-                        <p class="color-dask-blue fw-bold mg-top">Kết quả đăng ký học kỳ 2024_2025_1</p>
-                    </div>
-                    <table>
-                        <tr class="table-head">
-                            <th>STT</th>
-                            <th>Môn học</th>
-                            <th>Lớp học</th>
-                            <th>Loại lớp</th>
-                            <th>Thời gian</th>
-                            <th>Tổng số</th>
-                            <th>Thứ</th>
-                            <th>Đã đăng ký</th>
-                            <th>Giá môn học </th>
-                            
-                            <th>Xem chi tiết</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>An toàn và bảo mật thông tin</td>
-                            <td>An toàn và bảo mật thông tin-1-1-24(N0101)</td>
-                            <td>Thực hành</td>
-                            <td>09/09/2024 - 20/10/2024</td>
-                            <td>45</td>
-                            <td>4,6</td>
-                            <td>46</td>
-                            <td>0</td>
-                            
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>An toàn và bảo mật thông tin</td>
-                            <td>An toàn và bảo mật thông tin-1-1-24(N01)</td>
-                            <td>Lý thuyết</td>
-                            <td>19/08/2024 - 13/10/2024</td>
-                            <td>90</td>
-                            <td>2,5</td>
-                            <td>93</td>
-                            <td>2,233,000</td>
-                            
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Tư tưởng Hồ Chí Minh</td>
-                            <td>Tư tưởng Hồ Chí Minh-1-1-24(N03)</td>
-                            <td>Elearning</td>
-                            <td>19/08/2024 - 27/10/2024</td>
-                            <td>800</td>
-                            <td>4,6</td>
-                            <td>800</td>
-                            <td>1,276,000</td>
-                          
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Kỹ thuật phần mềm</td>
-                            <td>Kỹ thuật phần mềm-1-1-24(N04)</td>
-                            <td>Lý thuyết</td>
-                            <td>19/08/2024 - 13/10/2024</td>
-                            <td>40</td>
-                            <td>3,7</td>
-                            <td>30</td>
-                            <td>1,435,500</td>
-                          
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Mạng máy tính</td>
-                            <td>Mạng máy tính-1-1-24(EL05).ELN</td>
-                            <td>Elearning</td>
-                            <td>19/08/2024 - 13/10/2024</td>
-                            <td>500</td>
-                            <td>6</td>
-                            <td>400</td>
-                            <td>1,276,000</td>
-                            
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Mạng máy tính</td>
-                            <td>Mạng máy tính-1-1-24(N02)</td>
-                            <td>Thực hành</td>
-                            <td>19/08/2024 - 13/10/2024</td>
-                            <td>120</td>
-                            <td>4</td>
-                            <td>117</td>
-                            <td>0</td>
-                            
-                            <td><a href="#">Xem chi tiết</a></td>
-                        </tr>
-                    </table>
-                    <div class="form-top">
-                        <button class="btn-primary">Xuất báo cáo</button>
-                        <button class="btn-secondary">In kết quả</button>
+                    <div class="table-bg box-shadow">
+                        <div class="table-title">
+                            <p class="color-dask-blue fw-bold mg-top">Kết quả đăng ký học kỳ 2024_2025_1</p>
+                        </div>
+                        <table>
+                            <tr class="table-head">
+                                <th>STT</th>
+                                <th>Môn học</th>
+                                <th>Lớp học</th>
+                                <th>Loại lớp</th>
+                                <th>Thời gian</th>
+                                <th>Tổng số</th>
+                                <th>Thứ</th>
+                                <th>Đã đăng ký</th>
+                                <th>Giá môn học </th>
+
+                                <th>Xem chi tiết</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>An toàn và bảo mật thông tin</td>
+                                <td>An toàn và bảo mật thông tin-1-1-24(N0101)</td>
+                                <td>Thực hành</td>
+                                <td>09/09/2024 - 20/10/2024</td>
+                                <td>45</td>
+                                <td>4,6</td>
+                                <td>46</td>
+                                <td>0</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>An toàn và bảo mật thông tin</td>
+                                <td>An toàn và bảo mật thông tin-1-1-24(N01)</td>
+                                <td>Lý thuyết</td>
+                                <td>19/08/2024 - 13/10/2024</td>
+                                <td>90</td>
+                                <td>2,5</td>
+                                <td>93</td>
+                                <td>2,233,000</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Tư tưởng Hồ Chí Minh</td>
+                                <td>Tư tưởng Hồ Chí Minh-1-1-24(N03)</td>
+                                <td>Elearning</td>
+                                <td>19/08/2024 - 27/10/2024</td>
+                                <td>800</td>
+                                <td>4,6</td>
+                                <td>800</td>
+                                <td>1,276,000</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Kỹ thuật phần mềm</td>
+                                <td>Kỹ thuật phần mềm-1-1-24(N04)</td>
+                                <td>Lý thuyết</td>
+                                <td>19/08/2024 - 13/10/2024</td>
+                                <td>40</td>
+                                <td>3,7</td>
+                                <td>30</td>
+                                <td>1,435,500</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Mạng máy tính</td>
+                                <td>Mạng máy tính-1-1-24(EL05).ELN</td>
+                                <td>Elearning</td>
+                                <td>19/08/2024 - 13/10/2024</td>
+                                <td>500</td>
+                                <td>6</td>
+                                <td>400</td>
+                                <td>1,276,000</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Mạng máy tính</td>
+                                <td>Mạng máy tính-1-1-24(N02)</td>
+                                <td>Thực hành</td>
+                                <td>19/08/2024 - 13/10/2024</td>
+                                <td>120</td>
+                                <td>4</td>
+                                <td>117</td>
+                                <td>0</td>
+
+                                <td><a href="#">Xem chi tiết</a></td>
+                            </tr>
+                        </table>
+                        <div class="form-top">
+                            <button class="btn-primary">Xuất báo cáo</button>
+                            <button class="btn-secondary">In kết quả</button>
+                        </div>
                     </div>
                 </div>
-            </div>
                 <div class="hocphi nd" id="hocphi">
                     <div class="nav-content">
                         <p class="title-nav-content">
